@@ -1,0 +1,16 @@
+{
+  "name": "twitchplays",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andreistalker",
+  "license": "ISC",
+  "dependencies": {
+    "active-win": "^5.1.2",
+    "robotjs": "^0.5.1",
+    "tmi.js": "^1.4.5"
+  }
+}
