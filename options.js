@@ -1,4 +1,4 @@
-const settings = {
+const options = {
 	connection: {
 		reconnect: true
 	},
