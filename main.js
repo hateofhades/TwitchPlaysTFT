@@ -103,153 +103,153 @@ function onMessageHandler(target, context, msg, self) {
 	
 	if(winActive.title == "League of Legends") {
 		if(commandName == "!play") {
-			waitForNextCommand();
+			waitCommand();
 			moveAndClick(300, 110); //Play button
 			setTimeout(function() {moveAndClick(1250, 325)}, 1000); //TFT Button
 			setTimeout(function() {moveAndClick(1200, 715)}, 1500); //Ranked Button
 			setTimeout(function() {moveAndClick(842, 919)}, 1800); //Confirm Button
 			setTimeout(function() {moveAndClick(842, 919)}, 10000);	//Start Button
-			setTimeout(function() {waitForNextCommand()}, 10300);	
+			setTimeout(function() {waitCommand()}, 10300);	
 		} else if(commandName == "!accept") {
-			waitForNextCommand();
+			waitCommand();
 			moveAndClick(950, 750); //Accept Button
-			setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		} else if(commandName == "!skip") {
-			waitForNextCommand();
+			waitCommand();
 			moveAndClick(827, 517); //Skip waiting for stats
-			setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		}
 	} else if(winActive.title == "League of Legends (TM) Client") {
 		if(commandName == "!r") {
-			waitForNextCommand();
+			waitCommand();
 			robot.keyTap("d");
-			waitForNextCommand();
+			waitCommand();
 		} else if(commandName == "!xp") {
-			waitForNextCommand();
+			waitCommand();
 			robot.keyTap("f");
-			waitForNextCommand();
+			waitCommand();
 		} else if(commandName == "!exit") {
-			waitForNextCommand();
+			waitCommand();
 			moveAndClick(850, 530);
 			setTimeout(function() {moveAndClick(715, 920)}, 10000);
-			setTimeout(function() {waitForNextCommand()}, 10000 + waitTime + 100);	
+			setTimeout(function() {waitCommand()}, 10000 + waitTime + 100);	
 		} else if(commandName == "!continue") {
-			waitForNextCommand();
+			waitCommand();
 			moveAndClick(958, 645);
 			setTimeout(function() {moveAndClick(715, 920)}, 10000);
-			setTimeout(function() {waitForNextCommand()}, 10000+ waitTime + 100);	
+			setTimeout(function() {waitCommand()}, 10000+ waitTime + 100);	
 		} else if(commandName == "!b") {
 			if(words[1] == "1") {
-				waitForNextCommand();
+				waitCommand();
 				moveAndClick(buyLocation.s1[0], buyLocation.s1[1]);
-				setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+				setTimeout(function() {waitCommand()}, waitTime + 100);	
 			} else if(words[1] == "2") {
-				waitForNextCommand();
+				waitCommand();
 				moveAndClick(buyLocation.s2[0], buyLocation.s2[1]);
-				setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+				setTimeout(function() {waitCommand()}, waitTime + 100);	
 			} else if(words[1] == "3") {
-				waitForNextCommand();
+				waitCommand();
 				moveAndClick(buyLocation.s3[0], buyLocation.s3[1]);
-				setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+				setTimeout(function() {waitCommand()}, waitTime + 100);	
 			} else if(words[1] == "4") {
-				waitForNextCommand();
+				waitCommand();
 				moveAndClick(buyLocation.s4[0], buyLocation.s4[1]);
-				setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+				setTimeout(function() {waitCommand()}, waitTime + 100);	
 			} else if(words[1] == "5") {
-				waitForNextCommand();
+				waitCommand();
 				moveAndClick(buyLocation.s5[0], buyLocation.s5[1]);
-				setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+				setTimeout(function() {waitCommand()}, waitTime + 100);	
 			}
 		} else if(commandName == "!m") {
 			if(words[1] in locations && words[2] in locations && words[1] && words[2]) {
-				waitForNextCommand();
+				waitCommand();
 				robot.moveMouse(locations[words[1]][0]/trueWH, locations[words[1]][1]/trueWH);
 				robot.mouseToggle("down");
 				robot.dragMouse(locations[words[2]][0]/trueWH, locations[words[2]][1]/trueWH);
 				robot.mouseToggle("up");
-				setTimeout(function() {waitForNextCommand()}, 100);	
+				setTimeout(function() {waitCommand()}, 100);	
 			}
 		} else if(commandName == "!i") {
 			if(words[1] in itemLocation && words[2] in locations && words[1] && words[2]) {
-				waitForNextCommand();
+				waitCommand();
 				robot.moveMouse(itemLocation[words[1]][0]/trueWH, itemLocation[words[1]][1]/trueWH);
 				robot.mouseToggle("down");
 				robot.dragMouse(locations[words[2]][0]/trueWH, locations[words[2]][1]/trueWH);
 				robot.mouseToggle("up");
-				setTimeout(function() {waitForNextCommand()}, 100);	
+				setTimeout(function() {waitCommand()}, 100);	
 			}
 		} else if(commandName == "!s") {
 			if(words[1] in locations && words[1]) {
-				waitForNextCommand();
+				waitCommand();
 				robot.moveMouse(locations[words[1]][0]/trueWH, locations[words[1]][1]/trueWH);
 				setTimeout(function() {robot.keyTap("e");}, waitTime);
-				setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+				setTimeout(function() {waitCommand()}, waitTime + 100);	
 			}
 		} else if(commandName == "!move") {
 			if(words[1] in locations  && words[1]) {
-				waitForNextCommand();
+				waitCommand();
 				robot.moveMouse(locations[words[1]][0]/trueWH, locations[words[1]][1]/trueWH);
 				setTimeout(function() {robot.mouseClick("right");}, waitTime);
-				setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+				setTimeout(function() {waitCommand()}, waitTime + 100);	
 			} else if(words[1] in directions && words[1]) {
-				waitForNextCommand();
+				waitCommand();
 				robot.moveMouse(directions[words[1]][0]/trueWH, directions[words[1]][1]/trueWH);
 				setTimeout(function() {robot.mouseClick("right");}, waitTime);
-				setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+				setTimeout(function() {waitCommand()}, waitTime + 100);	
 			}
 		} else if(commandName == "!lock") {
-			waitForNextCommand();
+			waitCommand();
 			moveAndClick(370, 908);
-			setTimeout(function() {waitForNextCommand()}, waitTime + 100);	
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		} else if(commandName == "!smile") {
-			waitForNextCommand();
+			waitCommand();
 			sendMessage(":)");
-			waitForNextCommand();
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		} else if(commandName == "!gg") {
-			waitForNextCommand();
+			waitCommand();
 			sendMessage("gg");
-			waitForNextCommand();
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		} else if(commandName == "!yes") {
-			waitForNextCommand();
+			waitCommand();
 			sendMessage("yes");
-			waitForNextCommand();
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		} else if(commandName == "!no") {
-			waitForNextCommand();
+			waitCommand();
 			sendMessage("no");
-			waitForNextCommand();
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		} else if(commandName == "!join") {
-			waitForNextCommand();
+			waitCommand();
 			sendMessage("Join us at: twitch.tv/letsplaytft");
-			waitForNextCommand();
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		} else if(commandName == "!sad") {
-			waitForNextCommand();
+			waitCommand();
 			sendMessage(":(");
-			waitForNextCommand();
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		} else if(commandName == "!kappa") {
-			waitForNextCommand();
+			waitCommand();
 			sendMessage("kappa");
-			waitForNextCommand();
+			setTimeout(function() {waitCommand()}, waitTime + 100);	
 		} else if(commandName == "!emote") {
 			if(words[1] == 0) {
-				waitForNextCommand();
+				waitCommand();
 				robot.keyTap("numpad_5");
-				waitForNextCommand();
+				waitCommand();
 			} else if(words[1] == 1) {
-				waitForNextCommand();
+				waitCommand();
 				robot.keyTap("numpad_8");
-				waitForNextCommand();
+				waitCommand();
 			} else if(words[1] == 2) {
-				waitForNextCommand();
+				waitCommand();
 				robot.keyTap("numpad_4");
-				waitForNextCommand();
+				waitCommand();
 			} else if(words[1] == 3) {
-				waitForNextCommand();
+				waitCommand();
 				robot.keyTap("numpad_6");
-				waitForNextCommand();
+				waitCommand();
 			} else if(words[1] == 4) {
-				waitForNextCommand();
+				waitCommand();
 				robot.keyTap("numpad_2");
-				waitForNextCommand();
+				waitCommand();
 			}
 		}
 	}
@@ -262,8 +262,8 @@ function onConnectedHandler(addr, port) {
 
 function sendMessage(msg) {
 	robot.keyTap("t");
-	robot.typeString(msg);
-	robot.keyTap("enter");
+	setTimeout(function() {robot.typeString(msg);}, waitTime);
+	setTimeout(function() {robot.keyTap("enter");, waitTime + 50);
 }
 
 function moveAndClick(x, y) {
