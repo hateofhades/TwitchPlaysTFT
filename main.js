@@ -263,7 +263,7 @@ function onConnectedHandler(addr, port) {
 function sendMessage(msg) {
 	robot.keyTap("t");
 	setTimeout(function() {robot.typeString(msg);}, waitTime);
-	setTimeout(function() {robot.keyTap("enter");, waitTime + 50);
+	setTimeout(function() {robot.keyTap("enter");}, waitTime + 50);
 }
 
 function moveAndClick(x, y) {
